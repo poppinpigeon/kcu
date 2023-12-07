@@ -156,7 +156,7 @@ public class RegisterActivity extends AppCompatActivity {
                     firebaseUser.updateProfile(profileChangeRequest);
 
                     //enter user data to Firebase
-                    ReadWriteUserDetails writeUserDetails = new ReadWriteUserDetails(gender, ethnicity, roommate);
+                    ReadWriteUserDetails writeUserDetails = new ReadWriteUserDetails(name, gender, ethnicity, roommate, email);
 
                     //extracting user reference from registered users database
                     DatabaseReference referenceProfile = FirebaseDatabase.getInstance().getReference("Registered Users");
