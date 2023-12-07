@@ -17,21 +17,27 @@
         android:text="Sign In" />
 
     <EditText
+        android:id="@+id/editText_email_login"
+        android:inputType="textEmailAddress"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
         android:layout_marginTop="20dp"
         android:textSize="20sp"
+        android:drawableLeft="@drawable/icons8_user_24"
         android:hint="Email"/>
 
     <EditText
+        android:id="@+id/editText_password_login"
+        android:inputType="textPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
         android:layout_marginTop="20dp"
         android:textSize="20sp"
+        android:drawableLeft="@drawable/icons8_lock_24"
         android:hint="Password"/>
 
     <Button
@@ -42,7 +48,8 @@
         android:layout_marginTop="20dp"
         android:paddingHorizontal="50dp"
         android:textSize="20sp"
-        android:text="Sign In" />
+        android:text="Sign In"
+        android:onClick="onClickButtonSignIn"/>
 
     <TextView
         android:id="@+id/textView_register"
@@ -54,4 +61,12 @@
         android:text="Don't have an account?"
         android:clickable="true"
         android:onClick="onClickTextRegister"/>
+
+    <ProgressBar
+        android:id="@+id/progressBar_signIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:visibility="gone"/>
 </LinearLayout>
